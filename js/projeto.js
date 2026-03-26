@@ -1,4 +1,4 @@
-// BOTAO DE MUDAR PARA DARK MODE -- NAO FUNCIONAL
+// BOTAO DE MUDAR PARA DARK MODE -- NAO FUNCIONAL -- pedir ajuda
 
 function changeDarkMode() {
 
