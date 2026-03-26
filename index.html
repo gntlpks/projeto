@@ -14,36 +14,36 @@
 
 <div class="container my-5">
 
-  <body>
+  <body id="profile-card">
     <!-- TITULO DENTRO DO PRIMEIRO CARD -->
     <div class="card mb-4">
       <div class="card-body text-center">
-        <h2 class="card-title">Meu Portfólio</h2>
+        <h2 class="card-title" id="profile-nome"> ✨ Meu Portfólio ✨</h2>
         <!-- IMAGEM -->
         <img id="imgport" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/3c279366277695.5b105b769eb49.png"
           class="img-fluid rounded mb-3" style="max-width: 300px;" />
         <!-- BOTOES  -->
-        <button id="changeimg" class="btn btn-danger">Trocar Imagem 📸</button>
-        <button id="changeBackgroundColor" class="btn btn-danger">Mudar cor 🎨</button>
+        <button id="changeimg" class="btn btn-warning">Trocar Imagem 📸</button>
+        <button id="changeBackgroundColor" class="btn btn-warning">Mudar cor 🎨</button>
+         <button id="darkmode" class="btn btn-warning">Night Mode 🌃</button>
 
+         
 
       </div>
 
       <!-- PARAGRAFO DENTRO DE OUTRO CARD -->
       <h3>✨ Quem sou eu ✨</h3>
-      <p>Me chamo Amanda, sou brasileira, casada, 34 anos. Moro em Portugal há 7 anos. Sou de Natal, Rio Grande do
+      <p id="profile-frase">Me chamo Amanda, sou brasileira, casada, 34 anos. Moro em Portugal há 7 anos. Sou de Natal, Rio Grande do
         Norte, mas morei uma parte da minha vida em Belo Horizonte, Minas Gerais. Se me perguntar se sinto saudades
         do Brasil, vou dizer que não. É difícil falar sobre mim mesma, às vezes parece que não sou nada, ao mesmo
-        tempo que sou muitas coisas.</p>
-      <p>Sou tatuadora handpoke (uma técnica sem máquina), há 7 anos. É o que mais gosto de fazer em toda minha vida.
-        Desde a primeira vez que tatuei nesta técnica, nunca mais parei.</p>
+        tempo que sou muitas coisas. Sou tatuadora handpoke (uma técnica sem máquina), há 7 anos. É o que mais gosto de fazer em toda minha vida. Desde a primeira vez que tatuei nesta técnica, nunca mais parei.</p>
 
 
     </div>
     <!-- HOBBIES DENTRO DE OUTRO CARD -->
     <div class="card mb-4">
       <div class="card-body">
-        <h3 class="card-title">Hobbies</h3>
+        <h3 class="card-title">🎨 Hobbies 🖌️</h3>
 
         <ul id="hobby-list">
           <li>artes</li>
@@ -52,7 +52,7 @@
           <li>fotografia analógica</li>
         </ul>
         <!-- BOTAO ADICIONAR HOBBY -->
-        <button id="addHobby" class="btn btn-danger mt-2">
+        <button id="addHobby" class="btn btn-warning mt-2">
           Adicionar Hobby
         </button>
       </div>
@@ -62,9 +62,9 @@
     <div id="container">
       <div class="card mb-4">
         <div class="card-body text-center">
-          <h3 class="card-title">Tarot do Dia 🔮</h3>
+          <h3 class="card-title">✨ Tarot do Dia 🔮</h3>
 
-          <button id="drawCard" class="btn btn-dark mb-3">
+          <button id="drawCard" class="btn btn-warning mt-2">
             Tirar carta do dia
           </button>
 
@@ -73,33 +73,46 @@
 
       </div>
 
-
+      <!-- FORTUNE COOKIE API -->
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-body text-center">
+<h3 class="card-title">✨ Fortune Cookie 🥠</h3>
+        <button id="fortuneBtn" class="btn btn-warning mt-2 w-auto">Abrir Cookie</button>
+        <p id="fortune-text" class="mt-2"></p>
+      </div>
+        
+    </div>
+</div>
 
       <!-- FORMULARIO PERSONALIZAR -->
       <div class="card mb-4">
         <div class="card-body">
-          <h3 class="card-title">Personalizar Portfólio</h3>
+          <h3 class="card-title">🖌️ Personalizar Portfólio ✨</h3>
 
           <form id="profileForm">
             <label>Nome:</label>
-            <input type="text" id="nome" class="form-control mb-2" />
+            <input type="text" id="nome" name="nome"class="form-control mb-2" />
 
             <label>Frase:</label>
-            <textarea id="frase" class="form-control mb-2"></textarea>
+            <textarea id="frase" name="frase" class="form-control mb-2"></textarea>
 
             <label>Cor favorita:</label>
-            <input type="color" id="cor" class="form-control form-control-color mb-2" />
+            <input type="color" id="cor" name="cor" class="form-control form-control-color mb-2" />
 
             <label>Foto (URL):</label>
-            <input type="text" id="foto" class="form-control mb-2" />
+            <input type="text" id="foto" name="foto" class="form-control mb-2" />
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-warning mt-2">
               Atualizar
+            </button>
+            <button id="resetForm" type="button" class="btn btn-warning mt-2">
+              RESET
             </button>
           </form>
         </div>
       </div>
-      <button onclick="changeDarkMode()" class="btn btn-danger">Night Mode 🌃</button>
+     
 
       <!-- BOOTSTRAP -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
